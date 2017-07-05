@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Info";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@if (ViewBag.RepeatSendEmail)
+{
+    <a href="@Url.Action("RepaitSendEmail", "Account", new RouteValueDictionary { { "userId", ViewBag.UserId }, { "repeatSendEmail", ViewBag.RepeatSendEmail } })">没有收到邮件?</a>
+}
+
+
+
+
