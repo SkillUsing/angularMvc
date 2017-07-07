@@ -4,11 +4,11 @@
  
 # AngularMvc 和 angularKendo
 
-这个项目使用了：
-前端:angular,angularKendo,
-后端:Mvc(用于登录,没错就是偏执),WebApi
+> 前端:angular,angularKendo                            
+> 后端:Mvc,WebApi         
 
 # 注意
-> 需要注意的是angular2.x 版本和 angular4.0 版本在文件关联性上有一点差异,详细查询官方文档,这里不做表述.
-> angularKendo 作为引用需要填写描述文件,否则会提示找不到文件.
-> 也就是这么多需要注意的地方.
+> 需要注意的是angular2.x 版本和 angular4.0 版本在文件关联性上有一点差异,详细查询官方文档,这里不做表述.       
+> angularKendo 作为引用需要填写描述文件,否则会提示找不到文件.        
+> 也就是这么多需要注意的地方.         
+  
