@@ -9,16 +9,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "英雄编辑器";
+        this.name = 'Angular';
     }
+    AppComponent.prototype.onButtonClick = function () {
+        this.name = 'Kendo UI';
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: "my-app",
-        styleUrls: ["app.component.css"],
-        template: "\n<h1>{{title}}</h1>\n",
-        moduleId: module.id
+        selector: 'my-app',
+        styleUrls: [
+            // load the Kendo UI Default theme
+            'node_modules/@progress/kendo-theme-default/dist/all.css'
+        ],
+        template: "\n    <h1>Hello {{name}}!</h1>\n    <button kendoButton (click)=\"onButtonClick()\" [primary]=\"true\">My Kendo UI Button</button> \n  "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

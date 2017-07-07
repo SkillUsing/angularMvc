@@ -1,0 +1,8 @@
+{
+  "server": {
+    "baseDir": "Scripts",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}

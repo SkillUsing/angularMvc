@@ -1,29 +1,31 @@
-import { NgModule } from "@angular/core";
+ï»¿import { LOCALE_ID, NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';//Õâ¸öµ¼ÈëÓÃÓÚ½â¾öË¢ĞÂÍøÒ³404µÄÎÊÌâ
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';//è¿™ä¸ªå¯¼å…¥ç”¨äºè§£å†³åˆ·æ–°ç½‘é¡µ404çš„é—®é¢˜
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
-//Ö¸Áî;
-//1.×é¼ş - ÓµÓĞÄ£°åµÄÖ¸Áî  //ËùÓĞComponent
-//2.½á¹¹ĞÍÖ¸Áî - Í¨¹ıÌí¼ÓºÍÒÆ³ıDomÔªËØ¸Ä±äDom ²¼¾ÖµÄÖ¸Áî   ÀıÈç:NgFor.NgIf
-//3.ÊôĞÔĞÍÖ¸Áî - ¸Ä±äÔªËØ,×é¼ş»òÆäËûÖ¸ÁîµÄÍâ¹ÛºÍĞĞÎªµÄÖ¸Áî ÀıÈç:HighlightDirective
+//æŒ‡ä»¤;
+//1.ç»„ä»¶ - æ‹¥æœ‰æ¨¡æ¿çš„æŒ‡ä»¤  //æ‰€æœ‰Component
+//2.ç»“æ„å‹æŒ‡ä»¤ - é€šè¿‡æ·»åŠ å’Œç§»é™¤Domå…ƒç´ æ”¹å˜Dom å¸ƒå±€çš„æŒ‡ä»¤   ä¾‹å¦‚:NgFor.NgIf
+//3.å±æ€§å‹æŒ‡ä»¤ - æ”¹å˜å…ƒç´ ,ç»„ä»¶æˆ–å…¶ä»–æŒ‡ä»¤çš„å¤–è§‚å’Œè¡Œä¸ºçš„æŒ‡ä»¤ ä¾‹å¦‚:HighlightDirective
 
-//Components  ×é¼ş - ÓµÓĞÄ£°åµÄÖ¸Áî
+//Components  ç»„ä»¶ - æ‹¥æœ‰æ¨¡æ¿çš„æŒ‡ä»¤
 import { AppComponent } from "./Component/app.component";
 
 
 @NgModule({
   imports: [
     BrowserModule,
-    //Èç¹ûÏëÒªÊ¹ÓÃ[(ngModel)]ÀàËÆµÄ±í´ïÊ½,ĞèÒªÒıÈëÕâ¸öFormsModule
+    //å¦‚æœæƒ³è¦ä½¿ç”¨[(ngModel)]ç±»ä¼¼çš„è¡¨è¾¾å¼,éœ€è¦å¼•å…¥è¿™ä¸ªFormsModule
     FormsModule,
-    HttpModule
+    HttpModule,
+    ButtonsModule
   ],
-  declarations: [//°üº¬Ó¦ÓÃÖĞÊı¾İ¸ÃÄ£¿éµÄ×é¼ş¡¢¹ÜµÀºÍÖ¸ÁîµÄÁĞ±í
+  declarations: [//åŒ…å«åº”ç”¨ä¸­æ•°æ®è¯¥æ¨¡å—çš„ç»„ä»¶ã€ç®¡é“å’ŒæŒ‡ä»¤çš„åˆ—è¡¨
     AppComponent
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],//ÕâÀï½«HeroServiceÔÚÈ«¾Ö×¢²á,´ËÊ±ÈÎºÎ×ÓÈİÆ÷¶¼ÄÜ·ÃÎÊËü
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],//è¿™é‡Œå°†HeroServiceåœ¨å…¨å±€æ³¨å†Œ,æ­¤æ—¶ä»»ä½•å­å®¹å™¨éƒ½èƒ½è®¿é—®å®ƒ
   bootstrap: [AppComponent]
 })
 export class AppModule { }

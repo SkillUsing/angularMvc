@@ -10,12 +10,13 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
-var common_1 = require("@angular/common"); //����������ڽ��ˢ����ҳ404������
-//ָ��;
-//1.��� - ӵ��ģ���ָ��  //����Component
-//2.�ṹ��ָ�� - ͨ����Ӻ��Ƴ�DomԪ�ظı�Dom ���ֵ�ָ��   ����:NgFor.NgIf
-//3.������ָ�� - �ı�Ԫ��,���������ָ�����ۺ���Ϊ��ָ�� ����:HighlightDirective
-//Components  ��� - ӵ��ģ���ָ��
+var common_1 = require("@angular/common"); //这个导入用于解决刷新网页404的问题
+var kendo_angular_buttons_1 = require("@progress/kendo-angular-buttons");
+//指令;
+//1.组件 - 拥有模板的指令  //所有Component
+//2.结构型指令 - 通过添加和移除Dom元素改变Dom 布局的指令   例如:NgFor.NgIf
+//3.属性型指令 - 改变元素,组件或其他指令的外观和行为的指令 例如:HighlightDirective
+//Components  组件 - 拥有模板的指令
 var app_component_1 = require("./Component/app.component");
 var AppModule = (function () {
     function AppModule() {
@@ -26,9 +27,10 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            //�����Ҫʹ��[(ngModel)]���Ƶı��ʽ,��Ҫ�������FormsModule
+            //如果想要使用[(ngModel)]类似的表达式,需要引入这个FormsModule
             forms_1.FormsModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            kendo_angular_buttons_1.ButtonsModule
         ],
         declarations: [
             app_component_1.AppComponent
