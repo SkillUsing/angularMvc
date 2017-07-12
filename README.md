@@ -15,7 +15,10 @@ $ npm clone https://github.com/SkillUsing/angularMvc.git
 $ npm cd angularMvc            
 $ npm i  或者 cnpm i              
 $ npm start 或者 VS中F5 或者 编译后直接使用iis加载网站.            
-//值得注意的是npm start 开始会 Cannot GET /,为什么要写上呢?自己猜.        
+// 在项目中添加了2中启动方式,一种是使用VS直接编译的模式,另一种是通过npm start 来启动.
+// 区别在于：
+// npm start 启动会编译angular以及TypeScript,将angular的最新修改直接展示出来,但是通过webApi来调用远程数据会有跨域的问题
+// vs 中按F5 则会完整的打开项目,但是angular以及TypeScript需要手动编译,并且GET请求需要清除缓存.
 ```
 
 # 注意
