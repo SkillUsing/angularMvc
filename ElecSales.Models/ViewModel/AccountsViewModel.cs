@@ -14,4 +14,17 @@ namespace ElecSales.Models
 
         public DateTime? LockoutEndDateUtc { get; set; }
     }
+
+    public class CreateProjectViewModel
+    {
+        public string UserName { get; set; }
+
+        public string Pwd { get; set; }
+
+        public string Pwds { get; set; }
+
+        public string ProjectTitle { get; set; }
+
+        public int Price { get; set; } = 0;
+    }
 }

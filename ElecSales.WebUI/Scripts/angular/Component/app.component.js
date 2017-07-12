@@ -18,7 +18,7 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
+        selector: '[my-app]',
         styleUrls: [
             // load the Kendo UI Default theme
             'node_modules/@progress/kendo-theme-default/dist/all.css'
